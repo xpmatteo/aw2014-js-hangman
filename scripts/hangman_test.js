@@ -1,17 +1,19 @@
 
-var p = new Prisoner('paperino');
 
 test('remaining count initial value', function() {
+  var p = new Prisoner('paperino');
   equal(p.remaining(), 18);
 });
 
 // test('remaining count after a guess', function() {
+//   var p = new Prisoner('paperino');
 //   p.guess('x');
 //
 //   equal(p.remaining(), 17);
 // });
 //
 // test('remaining count after two guesses', function() {
+//   var p = new Prisoner('paperino');
 //   p.guess('x');
 //   p.guess('y');
 //
