@@ -7,3 +7,7 @@ Prisoner.prototype.remaining = function() {
   return this._remaining;
 }
 
+Prisoner.prototype.display = function() {
+  return "*******";
+}
+

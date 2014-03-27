@@ -8,15 +8,20 @@
     <p><button id='new-game'>New Game!</button></p>
     <p>Prisoner: <span id='prisoner'></span></p>
     <p>Remaining: <span id='remaining'></span></p>
-    <p>
-      <input type="text" name="guess" value="" id="guess"/>
+    <form>
+      <input type="text" name="letter" value="" id="letter"/>
       <button id='guess'>Guess</button>
-    </p>
+    </form>
     <script src="scripts/hangman.js"></script>
 
     <script>
+      var current_game;
       window.onload = function() {
-        // ....
+        document.getElementById('new-game').onclick = function() {
+          current_game = new Prisoner('caspiterina');
+          document.getElementById('remaining').innerHTML = current_game.remaining();
+          document.getElementById('prisoner').innerHTML = current_game.display();
+        }
       }
     </script>
   </body>
